@@ -1,0 +1,95 @@
+CASI D'USO CLINICA
+
+UC1: CONSULTA OFFERTA
+-Attore primario: Utente non registrato
+  Scenario principale di successo:
+  1)L'utente vuole consultare l'elenco delle tipologie di esami.
+  2)L'utente sceglie l'attivitˆ "Mostra Tipologie di Esami".
+  3)Il sistema ritorna un elenco delle tipologie di esami disponibili mostrandone per ognuna il nome
+  4)L'utente inserisce il codice di una tipologia di esame a cui è interessato
+  5)Il sistema mostra la descrizione, il nome e il costo e i prerequisiti della tipologia d'esame scelto.
+ L'utente ripete i passi 4 e 5 un numero indefinito di volte
+
+
+UC2: CREA ESAME
+-Attore primario: Amministratore
+  Scenario principale di successo:
+  1)L'amministratore vuole prenotare un esame per un paziente.
+  2)L'amministratore sceglie l'attivitˆ "Prenota Esame".
+  3)Il sistema ritorna l'elenco delle tipologie di esami mostrandone per ognuna il nome.
+  4)L'amministratore inserisce il codice della tipologia dell'esame da prenotare.
+  5)Il sistema mostra il nome, la descrizione, il costo e i prerequisiti della tipologia di esame scelta.
+  6)L'amministratore inserisce il codice fiscale del paziente.
+  7)Il sistema mostra i dati del paziente e l'elenco dei medici.
+  8)L'amministratore inserisce il codice del medico da associare all'esame.
+  9)Il sistema ritorna un riepilogo complessivo dei dati dell'esame mostrando nome, descrizione e costo della tipologia di esame, nome , cognome e data di nascita del paziente, 
+    nome, cognome e specializzazione del medico e data dell'esame.
+  10)L'admin conferma la prenotazione.
+  11) il sistema registra la prenotazione impostando la data di prenotazione.
+
+Estensioni:
+3-7a) L'amministratore annulla la prenotazione dell'esame. Il sistema non registra alcun esame.
+
+Pre-condizione: L'amministratore è giˆ identificato e autenticato e il paziente è registrato
+
+
+UC3: CONSULTA RISULTATI PROPRIO ESAME
+-Attore primario: Paziente
+  Scenario principale di successo:
+  1)Il paziente vuole consultare i risultati di un esame effettuato presso la clinica.
+  2)Il paziente sceglie l'attivitˆ "Consultazione Esami".
+  3)Il sistema ritorna l'elenco degli esami sostenuti dal paziente mostrando per ognuna il nome della tipologia dell'esame, la data di prenotazione e la data dell'esame.
+  4)Il paziente inserisce il codice dell'esame di cui visionare i risultati.
+  5)Il sistema ritorna i dettagli dell'esame mostrando i risultanti, la data di prenotazione e quella dell'esame, nome e cognome del paziente, nome descrizione e costo della
+    tipologia d'esame.
+ Il paziente ripete i passi 4 e 5 finch� non indica che ha terminato.
+
+Pre-condizione: il paziente è giˆ identificato e autenticato.
+
+
+UC4: INSERIMENTO TIPOLOGIA DI ESAME
+-Attore primario: Amministratore
+  Scenario principale di successo:
+  1)L'amministratore vuole inserire una nuova tipologia di esame nel sistema.
+  2)L'amministratore sceglie l'attivitˆ "Inserisci nuova tipologia di esame".
+  3)L'amministratore specifica il nome, la descrizione e il costo della nuova tipologia di esame da inserire.
+  4)Il sistema mostra un riepilogo dei dati inseriti dall'amministratore.
+  5)L'amministratore conferma l'inserimento della nuova tipologia di esame.
+
+Estensioni:
+3a)L'amministratore annulla l'operazione di inserimento della tipologia di esame. Il sistema non registra nulla.
+
+Pre-condizione: L'amministratore è giˆ identificato e autenticato.
+
+
+UC5: ESAMI EFFETTUATI DA UN MEDICO
+-Attore primario: Amministratore
+  Scenario principale di successo:
+  1)L'amministratore vuole consultare gli esami svolti da un medico
+  2)L'amministratore sceglie l'attivitˆ "Consulta esami per medico".
+  3)Il sistema mostra un elenco dei medici che lavorano nella clinica mostrando per ognuno nome, cognome e specializzazione.
+  4)L'amministratore inserisce il codice del medico del quale vuole consultare gli esami svolti.
+  5)Il sistema riporta un elenco degli esami svolti dal medico mostrando per ognuno nome e descrizione della tipologia dell'eseme, data dell'esame e nome e cognome del paziente.
+ L'amministratore ripete i passi 4 e 5 finchŽ non indica di aver terminato.
+
+Pre-condizione: L'amministratore è giˆ identificato e autenticato.
+
+
+UC6: INSERIMENTO RISULTATI ESAME
+-Attore primario: Amministratore
+  Scenario principale di successo:
+  1)L'amministratore vuole inserire i risultati di un esame.
+  2)L'amministratore sceglie l'attivitˆ "Inserisci Risultati".
+  3)Il sistema riporta un elenco delle tipologie di esame mostrandone il nome.
+  4)L'amministratore inserisce il codice di una tipologia di esame.
+  5)Il sistema riporta un elenco degli esami della tipologia scelta che sono senza risultati, mostrando per ognuno data dell'esame e nome e cognome del medico e del paziente
+  6)L'admin inserisce il codice dell'esame di cui vuole inserire i risultati.
+  7)Il sistema mostra i dati dell'esame
+  8)L'admin inserisce i risultati e il sistema li registra 
+ L'amministratore ripete i passi 4-8 finchŽ non indica che ha terminato
+  9)Il sistema mostra un riepilogo degli esami per i quali sono stati inseriti i risultati mostrando per ogni esame nome e cognome del medico e del paziente, data dell'esame e risultati.
+
+
+Pre-condizione: L'amministratore è giˆ identificato e autenticato.
+
+  
