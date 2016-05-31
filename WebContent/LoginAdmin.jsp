@@ -28,6 +28,6 @@
 			<li><a href='ElencoTipologieEsami.jsp'>Mostra Tipologie Di Esami</a></li>
 		</ul>
 	</div>
-	<div>
+	<div>Username:<h:inputText value="#{AdminController.username}"/></div>
+	<div>Password:<h1:inputText value="#{AdminController.password}"/></div>
 	
-	</div>

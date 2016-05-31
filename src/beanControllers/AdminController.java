@@ -17,7 +17,7 @@ public class AdminController {
 	private Admin admin;
 	
 	public String getAdmin(){
-		adminDao.createAdmin(username, psw);
+		this.admin = adminDao.createAdmin(username, psw);
 		return "admin";
 	}
 
